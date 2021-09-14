@@ -5,8 +5,21 @@ public class _39_MatrixChange {
         int columns, rows;
         int[][] m;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите размер матрицы (столбцы, колонки):");
+        System.out.println("Введите размер матрицы");
+        System.out.println("Введите столбцы:");
+        while (!sc.hasNextInt()) {
+            System.out.println("Это не целое число");
+            System.out.println("Введите столбцы:");
+            sc.next();
+        }
         columns = sc.nextInt();
+
+        System.out.println("Введите колонки:");
+        while (!sc.hasNextInt()) {
+            System.out.println("Это не целое число");
+            System.out.println("Введите колонки:");
+            sc.next();
+        }
         rows = sc.nextInt();
 
         System.out.println("Матрица:");
@@ -20,8 +33,22 @@ public class _39_MatrixChange {
         }
 
         System.out.println("Введите k-ый номер:");
-        int k = sc.nextInt();
+        boolean correctInput = false;
+        int k = 0;
+        while (!correctInput){
+            while (!sc.hasNextInt()) {
+                System.out.println("Это не целое число");
+                System.out.println("Введите k-ый номер:");
+                sc.next();
+            }
+            k = sc.nextInt();
 
+            if (k < 0 || k > rows || k > columns){
+                System.out.println("k-ый номер должен быть в границах матрицы:");
+            } else {
+                correctInput = true;
+            }
+        }
         int max = Math.abs(m[0][0]);
         int indexColumn = 0, indexRow = 0;
         for (int i = 0; i < rows; i++) {

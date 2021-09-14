@@ -6,6 +6,11 @@ public class _36_MatrixChange {
         int[][] m;
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите размер квадратной матрицы :");
+        while (!sc.hasNextInt()) {
+            System.out.println("Это не целое число");
+            System.out.println("Введите размер матрицы:");
+            sc.next();
+        }
         size = sc.nextInt();
 
         System.out.println("Матрица:");

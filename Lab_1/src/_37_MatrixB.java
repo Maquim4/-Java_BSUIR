@@ -5,8 +5,21 @@ public class _37_MatrixB {
         int columns, rows;
         int[][] m;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите размер матрицы (столбцы, колонки):");
+        System.out.println("Введите размер матрицы");
+        System.out.println("Введите столбцы:");
+        while (!sc.hasNextInt()) {
+            System.out.println("Это не целое число");
+            System.out.println("Введите столбцы:");
+            sc.next();
+        }
         columns = sc.nextInt();
+
+        System.out.println("Введите колонки:");
+        while (!sc.hasNextInt()) {
+            System.out.println("Это не целое число");
+            System.out.println("Введите колонки:");
+            sc.next();
+        }
         rows = sc.nextInt();
 
         System.out.println("Матрица:");
