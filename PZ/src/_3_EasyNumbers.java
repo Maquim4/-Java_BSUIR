@@ -1,12 +1,22 @@
 import java.util.Scanner;
 // не сделала
 public class _3_EasyNumbers {
+    public static boolean easyNumber(int num) {
+        boolean isEasy = true;
+        for ( int i = 2; i < Math.sqrt(num); i++) {
+            if (num % i == 0){
+                isEasy = false;
+                return isEasy;
+            }
+        }
+        return isEasy;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = 0;
-        Boolean isVariableRight = false;
+        boolean isVariableRight = false;
         while(!isVariableRight){
-            System.out.println("Введите границу a:");
+            System.out.println("Введите границу n:");
             while (!sc.hasNextInt()) {
                 System.out.println("Это не натуральное число.");
                 sc.next();
@@ -19,14 +29,14 @@ public class _3_EasyNumbers {
             }
         }
         for (int i = n; i <= 2 * n; i++) {
-            for ( int c = 2; c < Math.sqrt(i); c++) {
-                if ( i%c == 0) {
-                    return;
-                } else {
-
-                }
+            boolean first = easyNumber(i);
+            boolean second = easyNumber(i+2);
+            if( (i+2) > n*2){
+                second = false;
             }
-            System.out.println("Very well! It's simple!");
+            if( first && second ) {
+                System.out.println( i + " and " + (i+2) );
+            }
         }
     }
 }

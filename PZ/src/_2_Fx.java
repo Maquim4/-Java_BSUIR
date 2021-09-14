@@ -5,7 +5,7 @@ public class _2_Fx {
         System.out.println("Программа для вычисления значений функции F(x)\n" +
                 "на отрезке [а, b] с шагом h:");
         Scanner sc = new Scanner(System.in);
-        double a = 0.0, b = 0.0,  h = 0.0;
+        double a = 0, b = 0,  h = 0;
         System.out.println("Введите границу a:");
         while (!sc.hasNextDouble()) {
             System.out.println("Это не число");
@@ -13,7 +13,7 @@ public class _2_Fx {
             sc.next();
         }
         a = sc.nextDouble();
-        Boolean isVariableCorrect = false;
+        boolean isVariableCorrect = false;
         while ( !isVariableCorrect ){
             System.out.println("Введите границу b:");
             while (!sc.hasNextDouble()) {
