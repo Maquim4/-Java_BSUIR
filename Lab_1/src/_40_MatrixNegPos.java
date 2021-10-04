@@ -12,6 +12,7 @@ public class _40_MatrixNegPos {
             sc.next();
         }
         size = sc.nextInt();
+        size = Math.abs(size);
 
         System.out.println("Матрица:");
         m = new int [size][size];

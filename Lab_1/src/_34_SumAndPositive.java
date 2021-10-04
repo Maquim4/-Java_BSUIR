@@ -8,6 +8,8 @@ public class _34_SumAndPositive {
         System.out.println("Введите размер матрицы:");
         if (sc.hasNextInt()){
             size = sc.nextInt();
+            size = Math.abs(size);
+
             if (size > 0){
                 System.out.println("Матрица:");
                 m = new int [size][size];

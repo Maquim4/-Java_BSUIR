@@ -5,6 +5,7 @@ public class _29_CheckUserInput {
         int num = 0;
         int sum1 = 0, sum2 = 0;
         int[] arr;
+
         while(num == 0) {
             Scanner sc = new Scanner(System.in);
             System.out.println("Введите чётное положительное число:");

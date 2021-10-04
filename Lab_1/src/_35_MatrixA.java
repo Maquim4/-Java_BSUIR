@@ -13,6 +13,7 @@ public class _35_MatrixA {
             sc.next();
         }
         columns = sc.nextInt();
+        columns = Math.abs(columns);
 
         System.out.println("Введите колонки:");
         while (!sc.hasNextInt()) {
@@ -21,6 +22,7 @@ public class _35_MatrixA {
             sc.next();
         }
         rows = sc.nextInt();
+        rows = Math.abs(rows);
 
         System.out.println("Матрица:");
         m = new int [rows][columns];
